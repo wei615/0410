@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 My Vue Journey - 413730150</title>
+    <style>
+        :root {
+            --sidebar-width: 320px;
+            --primary-color: #ffafcc;
+            --secondary-color: #bde0fe;
+            --bg-color: #fff0f3;
+            --text-color: #5e548e;
+            --accent-color: #ffc8dd;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', 'Quicksand', sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow: hidden;
+        }
+
+        /* 側邊欄樣式 */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+        }
+
+        .sidebar-header {
+            padding: 30px 20px;
+            border-bottom: 1px solid #eee;
+            background: linear-gradient(135deg, #ffafcc 0%, #cdb4db 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .sidebar-header h1 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .student-info {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            background: rgba(255,255,255,0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .menu-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 15px;
+        }
+
+        ul { list-style: none; padding: 0; }
+
+        li { margin-bottom: 8px; }
+
+        a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 14px 15px;
+            border-radius: 15px;
+            display: block;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            margin: 5px 0;
+        }
+
+        a:hover {
+            background-color: var(--accent-color);
+            color: white;
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(255, 175, 204, 0.3);
+        }
+
+        /* 右側內容區樣式 */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: var(--bg-color);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #fff;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>🚀 Vue.js 課程</h1>
+            <div class="student-info">學號：413730150</div>
+        </div>
+        <div class="menu-container">
+            <ul>
+                <li><a href="ex1/index.html" target="content-frame">01. 插值與按鈕練習</a></li>
+                <li><a href="ex2/inedx.html" target="content-frame">02. 資料顯示與綁定</a></li>
+                <li><a href="ex3/index.html" target="content-frame">03. 事件處理與計數</a></li>
+                <li><a href="ex4/index.html" target="content-frame">04. 雙向綁定練習</a></li>
+                <li><a href="ex5/index.html" target="content-frame">05. 條件渲染切換</a></li>
+                <li><a href="ex6/index.html" target="content-frame">06. 列表渲染 (v-for)</a></li>
+                <li><a href="ex7/index.html" target="content-frame">07. 計算屬性練習</a></li>
+                <li><a href="ex8/index.html" target="content-frame">08. 動態樣式與 Class</a></li>
+                <li><a href="ex9/index.html" target="content-frame">09. 綜合練習：待辦清單</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <iframe name="content-frame" src="ex1/index.html"></iframe>
+    </main>
+</body>
+</html>
