@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>範例 02 - 資料顯示</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            padding: 20px;
+            background: #fff0f3;
+            color: #5e548e;
+        }
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(255, 175, 204, 0.2);
+            border: 2px solid #ffc8dd;
+            max-width: 400px;
+            margin: auto;
+        }
+        h2 { color: #ff8fab; }
+    </style>
+</head>
+<body>
+    <div id="app" class="card">
+        <h2>👤 個人資料展示</h2>
+        <p><strong>姓名：</strong>{{ name }}</p>
+        <p><strong>年齡：</strong>{{ age }} 歲</p>
+        <hr>
+        <p><strong>自我介紹：</strong>{{ name }} 今年 {{ age }} 歲，正在學習 Vue.js！</p>
+    </div>
+
+<!-- 引入 Vue -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+Vue.createApp({
+  data() {
+    return {
+      name: "小華",
+      age: 20
+    }
+  }
+}).mount("#app")
+</script>
+    
+</body>
+</html>
